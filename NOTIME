@@ -1,0 +1,31 @@
+
+#include <stdio.h>
+
+int main()
+{   
+    int N,H,x,i,d,flag=0;
+    int T[N];
+    printf("Enter no. of time zones, time required and time left:");
+    scanf("%d %d %d",&N,&H,&x);
+    printf("Enter times");
+    for(i=0;i<N;i++)
+    {
+    scanf("%d",&T[i]);
+    }
+    if(H<x)
+    {
+     printf("Yes");   
+    }
+    else{
+        d=H-x;
+        for(i=0;i<N;i++){
+          if(T[i]>=d)
+          flag=1;
+        }
+        if(flag==1)
+        printf("Yes");
+        else
+        printf("No");
+    }
+    return 0;
+}
